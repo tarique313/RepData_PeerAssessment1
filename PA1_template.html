@@ -203,16 +203,16 @@ library(plyr)</code></pre>
 </div>
 <div id="loading-and-preprocessing-the-data" class="section level1">
 <h1>Loading and preprocessing the data</h1>
-<pre class="r"><code>if (!file.exists(&quot;folder1&quot;))
+<pre class="r"><code>if (!file.exists(&quot;data&quot;))
 {
-    dir.create(&quot;folder1&quot;)
+    dir.create(&quot;data&quot;)
     url &lt;-  &quot;https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip&quot;
-    download.file(url, destfile = &quot;./folder1/activities.zip&quot;)
-    setwd(&quot;./folder1&quot;)
+    download.file(url, destfile = &quot;./data/activities.zip&quot;)
+    setwd(&quot;./data&quot;)
     unzip(&quot;activities.zip&quot;)
 }
 # 1.1- Load the data in the file &quot;activity.csv&quot;
-rawActivity &lt;- read.csv(&quot;./folder1/activity.csv&quot;)
+rawActivity &lt;- read.csv(&quot;./data/activity.csv&quot;)
 summary(rawActivity, echo = TRUE)</code></pre>
 <pre><code>##      steps            date              interval     
 ##  Min.   :  0.00   Length:17568       Min.   :   0.0  
